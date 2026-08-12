@@ -29,7 +29,7 @@ export default function GitHubSection() {
           <div className="glass-card p-6 rounded-2xl border border-white/[0.08] flex flex-col items-center justify-center">
             <p className="text-xs font-mono text-slate-500 mb-4">// GITHUB_OVERVIEW</p>
             <img
-              src="https://github-readme-stats.vercel.app/api?username=Hathim0001&show_icons=true&hide_border=true&theme=transparent&rank_icon=github&text_color=94a3b8&title_color=818cf8&icon_color=a78bfa"
+              src="https://github-readme-stats.vercel.app/api?username=Hathim0001&show_icons=true&hide_border=true&bg_color=00000000&rank_icon=github&text_color=94a3b8&title_color=818cf8&icon_color=a78bfa"
               alt="Mohammed Hathim's GitHub Stats"
               className="w-full max-w-sm rounded-lg opacity-90 hover:opacity-100 transition-opacity"
               loading="lazy"
@@ -40,7 +40,7 @@ export default function GitHubSection() {
           <div className="glass-card p-6 rounded-2xl border border-white/[0.08] flex flex-col items-center justify-center">
             <p className="text-xs font-mono text-slate-500 mb-4">// TOP_LANGUAGES</p>
             <img
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hathim0001&layout=compact&hide_border=true&theme=transparent&text_color=94a3b8&title_color=818cf8"
+              src="https://github-readme-stats.vercel.app/api/top-langs?username=Hathim0001&layout=compact&hide_border=true&bg_color=00000000&text_color=94a3b8&title_color=818cf8"
               alt="Top Languages"
               className="w-full max-w-sm rounded-lg opacity-90 hover:opacity-100 transition-opacity"
               loading="lazy"
