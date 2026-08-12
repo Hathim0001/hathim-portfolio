@@ -1,87 +1,96 @@
-const interests = [
-  { icon: '🌐', label: 'Full Stack Development' },
-  { icon: '⚙️', label: 'Backend Engineering' },
-  { icon: '🤖', label: 'Applied AI & ML' },
-  { icon: '👁️', label: 'Computer Vision' },
-  { icon: '🧠', label: 'NLP & LLM Applications' },
-  { icon: '🔁', label: 'Systems & Algorithms' },
+import { CheckIcon, SparklesIcon } from './Icons'
+
+const quickSpecs = [
+  { label: 'EDUCATION', value: 'PSG College of Technology' },
+  { label: 'PROGRAM', value: 'Integrated M.Sc. Software Systems' },
+  { label: 'TIMELINE', value: '5th Year Student (Final Year)' },
+  { label: 'FOCUS AREAS', value: 'Full Stack · Backend · AI/ML' },
+  { label: 'REPOSITORIES', value: '30+ Public Codebases' },
+  { label: 'STATUS', value: 'Open for Full-Time & Internship Roles' },
 ]
 
 export default function About() {
   return (
-    <section id="about" className="py-28 relative">
+    <section id="about" className="py-24 relative bg-[#08090b]">
+      <div className="section-divider mb-24" />
+
       <div className="max-w-6xl mx-auto px-6">
-        <div className="reveal grid md:grid-cols-2 gap-16 items-center">
-          {/* Text */}
-          <div>
-            <p className="text-indigo-400 text-sm font-semibold font-mono mb-3 tracking-widest uppercase">
-              // about_me
-            </p>
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          {/* Left Narrative Column */}
+          <div className="lg:col-span-7 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono">
+              <SparklesIcon size={14} />
+              <span>// ABOUT_ME</span>
+            </div>
+
             <h2
-              className="text-4xl md:text-5xl font-extrabold text-white mb-6"
-              style={{ fontFamily: 'Outfit, sans-serif' }}
+              className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight"
+              style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              Building software that{' '}
-              <span className="gradient-text">matters</span>
+              Architecting systems with <span className="text-gradient">precision & scale</span>
             </h2>
-            <div className="space-y-4 text-slate-400 leading-relaxed">
+
+            <div className="space-y-4 text-slate-400 text-base leading-relaxed font-normal">
               <p>
-                I'm <span className="text-white font-semibold">Mohammed Hathim</span>, a
-                5th-year Integrated M.Sc. Software Systems student at{' '}
-                <span className="text-indigo-300 font-medium">PSG College of Technology</span>, preparing
-                for a career in software engineering, full-stack development, and AI/ML.
+                I am <span className="text-slate-100 font-semibold">Mohammed Hathim</span>, a final-year Integrated M.Sc. Software Systems student at{' '}
+                <span className="text-indigo-300 font-medium">PSG College of Technology</span>. My academic curriculum combines rigorous theoretical computer science with hands-on enterprise software development.
               </p>
               <p>
-                I work across the full development lifecycle — from designing REST APIs and relational database schemas to
-                building responsive Next.js interfaces and fine-tuning transformer models on domain-specific datasets.
+                Over the past several years, I have engineered full-stack web applications, scalable REST APIs, database architectures, and applied machine learning models.
               </p>
               <p>
-                My work spans practical applications: a real-time AI interview platform, a legal contract risk evaluator using
-                fine-tuned Legal-BERT, synthetic image detection with adversarial robustness analysis, and several deployed
-                full-stack applications.
+                Whether it's building a real-time AI mock interview platform with WebSockets, fine-tuning Legal-BERT transformers for contract risk classification, or implementing virtual memory operating system algorithms in C, I focus on writing clean, maintainable, and high-performance code.
               </p>
             </div>
 
-            {/* Dev philosophy */}
-            <div className="mt-8 glass rounded-xl border border-white/5 p-5">
-              <p className="text-xs text-slate-500 mb-2 font-mono">// philosophy</p>
-              <p className="text-indigo-300 font-semibold text-lg" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
-                "Build → Break → Learn → Improve → Repeat"
-              </p>
+            {/* Developer Philosophy Quote Card */}
+            <div className="pt-2">
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.08] flex items-center justify-between">
+                <div className="space-y-0.5">
+                  <p className="text-xs text-slate-500 font-mono">// DEV_PHILOSOPHY</p>
+                  <p className="text-slate-200 font-mono text-sm font-semibold">
+                    "Build → Test → Benchmark → Optimize → Repeat"
+                  </p>
+                </div>
+                <div className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-mono text-xs font-bold">
+                  ⚡
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Interests grid */}
-          <div>
-            <p className="text-slate-500 text-sm mb-5 font-mono">// areas_of_focus</p>
-            <div className="grid grid-cols-2 gap-3">
-              {interests.map((item) => (
-                <div
-                  key={item.label}
-                  className="glass rounded-xl border border-white/5 p-4 flex items-center gap-3 hover:border-indigo-500/30 hover:bg-indigo-500/5 transition-all duration-300 group"
-                >
-                  <span className="text-2xl">{item.icon}</span>
-                  <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
-                    {item.label}
-                  </span>
-                </div>
-              ))}
-            </div>
+          {/* Right Structured Spec Card */}
+          <div className="lg:col-span-5">
+            <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/[0.08] space-y-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-2xl pointer-events-none rounded-full" />
 
-            {/* Quick facts */}
-            <div className="mt-6 grid grid-cols-3 gap-3 text-center">
-              {[
-                { num: '30+', label: 'Repositories' },
-                { num: '8+', label: 'Live Projects' },
-                { num: '5th', label: 'Year M.Sc.' },
-              ].map((s) => (
-                <div key={s.label} className="glass rounded-xl border border-white/5 p-4">
-                  <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                    {s.num}
+              <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
+                <h3 className="text-sm font-bold tracking-wider text-slate-200 uppercase font-mono">
+                  DEVELOPER_SPECS.json
+                </h3>
+                <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+              </div>
+
+              <div className="space-y-4 font-mono text-xs sm:text-sm">
+                {quickSpecs.map((spec) => (
+                  <div key={spec.label} className="space-y-1">
+                    <p className="text-slate-500 text-[10px] sm:text-xs tracking-wider uppercase">
+                      {spec.label}
+                    </p>
+                    <p className="text-slate-200 font-medium font-sans text-sm">
+                      {spec.value}
+                    </p>
                   </div>
-                  <div className="text-xs text-slate-500 mt-1">{s.label}</div>
+                ))}
+              </div>
+
+              {/* Status Badge */}
+              <div className="pt-2">
+                <div className="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs flex items-center gap-2">
+                  <CheckIcon size={14} className="text-emerald-400 shrink-0" />
+                  <span>Targeting Software Engineering & Developer Roles</span>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
